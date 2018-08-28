@@ -1,0 +1,272 @@
+@import 'compass_libraries.scss';
+@import "icons/*.png";
+@import '_menu.scss';
+@include all-icons-sprites;
+%dim {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin size($width, $height){
+  width:$width;
+  height:$height;
+}
+
+#myVideo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.tester {
+  position: absolute;
+  justify-content: center;
+  text-align: center;
+  top: 40%;
+  left: 30%;
+  font-size: 4rem;
+  font-weight: bold;
+  p {
+    color: #ffffff;
+  }
+}
+
+
+/* Add some content at the bottom of the video/page */
+
+
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  &:hover {
+    background: #ddd;
+    color: black;
+  }
+}
+
+main {
+  margin-top: 100vh;
+}
+
+
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.rubriques {
+  @extend %dim;
+  @include flex-direction(column);
+  background: #F3F3F3;
+  @include size(25%, 80vh);
+  border: 2px solid black;
+  font-size: 1.3rem;
+  font-weight: bold;
+  transition: .5s;
+  &:hover {
+    font-size: 1.6rem;
+    background: #e5e3e3;
+  }
+}
+
+
+.icons img {
+  width: 50px;
+}
+
+.text {
+  text-align: center;
+  margin: 30px 0 50px 0;
+  p {
+    color: black;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+}
+
+
+.button {
+  font-size: 1rem;
+  a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid black;
+    padding: 15px 30px 15px 30px;
+    transition: 1s;
+    &:hover {
+      color: white;
+      background: black;
+    }
+  }
+
+}
+
+
+.footer {
+  @extend %dim;
+  justify-content: space-around;
+  background: #35345B;
+  @include size(100%, 15vh);
+  font-size: 1.5rem;
+  a, p {
+    color: white;
+    text-decoration: none;
+
+  }
+  a{
+    width:100px;
+    height:100px;
+
+
+  }
+}
+
+.fixed-action-btn {
+  top: 50%;
+}
+
+.construction {
+  background: url('./img/construction.png');
+}
+
+/* responsivite */
+
+@media (max-width: 1400px) {
+  .tester {
+    font-size: 3.3rem;
+  }
+}
+
+@media (max-width: 1220px) {
+  .tester {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 1050px) {
+  .tester {
+    left: 20%;
+  }
+  navbar a {
+    font-size: 1.5rem;
+  }
+  .rubriques {
+    font-size: 1.1rem;
+  }
+  .rubriques:hover {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .rubriques {
+    @include size(50%, 40vh);
+
+  }
+  .logo {
+    width: 15%;
+  }
+  .text {
+    margin: 0 0 30px 0;
+  }
+  .button a {
+    padding: 10px 15px 10px 15px;
+  }
+  .backdoor #backdoor {
+    font-size: 0.6rem;
+  }
+  footer a {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .tester {
+    left: 16%;
+  }
+  navbar a {
+    font-size: 1.2rem;
+  }
+  .links a {
+    height: 30px;
+  }
+}
+
+@media (max-width: 650px) {
+  .tester {
+    left: 10%;
+  }
+  .backdoor #backdoor {
+    font-size: 0.5rem;
+  }
+  footer a, footer p {
+    font-size: 0.8rem;
+  }
+  navbar a {
+    font-size: 1rem;
+  }
+  .links a {
+    height: 25px;
+  }
+}
+
+@media (max-width: 550px) {
+  .tester {
+    left: 7%;
+    top: 30%;
+  }
+  navbar a {
+    font-size: 0.8rem;
+  }
+  .backdoor #backdoor {
+    font-size: 0.4rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .logo {
+    width: 50%;
+  }
+  .logo a {
+    width: 100%;
+  }
+  .backdoor {
+    width: 35%;
+  }
+  .links a:hover {
+    border: none;
+  }
+  .links {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+  .tester {
+    left: 5%;
+  }
+  .rubriques {
+    @include size(100%, 40vh);
+  }
+  .backdoor #backdoor {
+    font-size: 0.8rem;
+  }
+  footer a, footer p {
+    font-size: 0.6rem;
+  }
+  .links a {
+    height: 15px;
+  }
+}
+.tttt {
+  font-size: 20px;
+}
